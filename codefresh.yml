@@ -1,0 +1,12 @@
+version: '1.0'
+steps:
+  get_version:
+    image: codefresh/cfbase
+    commands:
+      - cf_export LATEST_VERSION=$(curl --fail https://gist.githubusercontent.com/itaysk/c023de03fe74dd3d5db336b7f9699b6b/raw/get-latest-version-dockerhub.sh | bash)
+  push:
+    type: push
+    candidate: ${CFCR_REPO}/${CFCR_IMAGE}}:${LATEST_VERSION}
+    image_name: xqweb/docker-enhavo-capistrano
+    tag: latest
+    registry: dockerhub
