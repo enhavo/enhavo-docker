@@ -1,4 +1,4 @@
-FROM xqweb/docker-symfony-capistrano:7.2-nginx
+FROM xqweb/symfony-capistrano:7.2-nginx
 
 RUN apt-get update && \
     apt-get install -y ffmpeg && \
@@ -6,5 +6,4 @@ RUN apt-get update && \
     apt-get install -y jpegoptim && \
     apt-get install -y gifsicle && \
     apt-get install -y pngquant && \
-    yarn install -g svgo && \
-    ln -s /usr/bin/nodejs /usr/bin/node
+    yarn global add svgo
