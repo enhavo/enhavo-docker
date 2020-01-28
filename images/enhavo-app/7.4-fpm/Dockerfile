@@ -6,21 +6,21 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
     add-apt-repository -y ppa:ondrej/php && \
     apt-get update && \
     apt-get install -y yarn && \
-    apt-get install -y php7.3-fpm && \
-    apt-get install -y php7.3-apcu && \
-    apt-get install -y php7.3-mysql && \
-    apt-get install -y php7.3-gd && \
-    apt-get install -y php7.3-curl && \
-    apt-get install -y php7.3-mbstring && \
-    apt-get install -y php7.3-dom && \
-    apt-get install -y php7.3-intl && \
-    apt-get install -y php7.3-zip && \
+    apt-get install -y php7.4-fpm && \
+    apt-get install -y php7.4-apcu && \
+    apt-get install -y php7.4-mysql && \
+    apt-get install -y php7.4-gd && \
+    apt-get install -y php7.4-curl && \
+    apt-get install -y php7.4-mbstring && \
+    apt-get install -y php7.4-dom && \
+    apt-get install -y php7.4-intl && \
+    apt-get install -y php7.4-zip && \
     apt-get install -y yarn && \
     apt-get install -y git && \
     apt-get install -y sudo && \
     apt-get install -y composer
 
-COPY /www.conf /etc/php/7.3/fpm/pool.d/www.conf
+COPY /www.conf /etc/php/7.4/fpm/pool.d/www.conf
 COPY /01_php-fpm.bash /etc/my_init.d/01_php-fpm.bash
 
 RUN chmod 744 /etc/my_init.d/01_php-fpm.bash
