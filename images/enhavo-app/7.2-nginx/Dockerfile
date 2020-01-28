@@ -1,4 +1,5 @@
 FROM xqweb/symfony-capistrano:7.2
+
 CMD ["/sbin/my_init"]
 
 RUN apt-get install -y nginx && \
@@ -15,3 +16,11 @@ RUN chmod 744 /etc/my_init.d/02_nginx.bash
 VOLUME ["/var/www", "/etc/nginx"]
 
 EXPOSE 80
+
+RUN apt-get update && \
+    apt-get install -y ffmpeg && \
+    apt-get install -y optipng && \
+    apt-get install -y jpegoptim && \
+    apt-get install -y gifsicle && \
+    apt-get install -y pngquant && \
+    yarn global add svgo
