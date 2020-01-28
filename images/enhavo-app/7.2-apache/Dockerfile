@@ -1,4 +1,4 @@
-FROM xqweb/symfony-capistrano:7.2
+FROM enhavo/enhavo-app:7.2-fpm
 
 CMD ["/sbin/my_init"]
 

@@ -1,4 +1,4 @@
-FROM xqweb/symfony-capistrano:base
+FROM enhavo/enhavo-app:base
 CMD ["/sbin/my_init"]
 
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
