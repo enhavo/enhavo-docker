@@ -11,15 +11,15 @@ The goal of this repository ist to provide docker images to easy deploy enhavo a
 So we provide some images that fit to your enhavo project. At least you need enhavo version `>=0.7` to run 
 this images without additional config.
 
-- `7.2-fpm` Ubuntu 16.04 and FPM with PHP Version 7.2
-- `7.2-apache` Ubuntu 16.04 and Apache with PHP Version 7.2
-- `7.2-nginx` Ubuntu 16.04 and Nginx with PHP Version 7.2
-- `7.3-fpm` Ubuntu 16.04 and FPM with PHP Version 7.3
-- `7.3-apache` Ubuntu 16.04 and Apache with PHP Version 7.3
-- `7.3-nginx` Ubuntu 16.04 and Nginx with PHP Version 7.3
-- `7.4-fpm` Ubuntu 16.04 and FPM with PHP Version 7.4
-- `7.4-apache` Ubuntu 16.04 and Apache with PHP Version 7.4
-- `7.4-nginx` Ubuntu 16.04 and Nginx with PHP Version 7.4
+- `7.2-fpm` Ubuntu 18.04 and FPM with PHP Version 7.2
+- `7.2-apache` Ubuntu 18.04 and Apache with PHP Version 7.2
+- `7.2-nginx` Ubuntu 18.04 and Nginx with PHP Version 7.2
+- `7.3-fpm` Ubuntu 18.04 and FPM with PHP Version 7.3
+- `7.3-apache` Ubuntu 18.04 and Apache with PHP Version 7.3
+- `7.3-nginx` Ubuntu 18.04 and Nginx with PHP Version 7.3
+- `7.4-fpm` Ubuntu 18.04 and FPM with PHP Version 7.4
+- `7.4-apache` Ubuntu 18.04 and Apache with PHP Version 7.4
+- `7.4-nginx` Ubuntu 18.04 and Nginx with PHP Version 7.4
 
 Usage
 -----
@@ -46,11 +46,11 @@ Also SSH for deployment is supported by the image, just use the port option to e
 
 `-p 2200:22`
 
-Overwrite Configurations
-------------------------
+Custom configurations
+---------------------
 
 If the docker image don't fit to your needs, than just extend it.
-Just create your custom `Dockerfile`. You can use apt-get to install
+Create your custom `Dockerfile`. You can use apt-get to install
 missing libraries.
 
 ```
@@ -76,7 +76,9 @@ $ docker run -dit -p 8000:80 --name enhavo-app your_company/custom_name:latest
 Contribution
 ------------
 
-Feel free to contribute
+Feel free to contribute just add a star this project or open a task or pull request.
+
+To build the images you can use `make` inside the `image/enhavo-app` directory
 
 MIT License
 -----------
