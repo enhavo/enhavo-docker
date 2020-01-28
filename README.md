@@ -11,15 +11,15 @@ The goal of this repository ist to provide docker images to easy deploy enhavo a
 So we provide some images that fit to your enhavo project. At least you need enhavo version `>=0.7` to run 
 this images without additional config.
 
-- `7.2-fpm` Ubuntu 18.04 and FPM with PHP Version 7.2
-- `7.2-apache` Ubuntu 18.04 and Apache with PHP Version 7.2
-- `7.2-nginx` Ubuntu 18.04 and Nginx with PHP Version 7.2
-- `7.3-fpm` Ubuntu 18.04 and FPM with PHP Version 7.3
-- `7.3-apache` Ubuntu 18.04 and Apache with PHP Version 7.3
-- `7.3-nginx` Ubuntu 18.04 and Nginx with PHP Version 7.3
-- `7.4-fpm` Ubuntu 18.04 and FPM with PHP Version 7.4
-- `7.4-apache` Ubuntu 18.04 and Apache with PHP Version 7.4
-- `7.4-nginx` Ubuntu 18.04 and Nginx with PHP Version 7.4
+- `7.2-fpm-latest` `7.2-fpm-0.1`
+- `7.2-apache-latest` `7.2-apache-0.1`
+- `7.2-nginx-latest` `7.2-nginx-0.1`
+- `7.3-fpm-latest` `7.3-fpm-0.1`
+- `7.3-apache-latest` `7.3-apache-0.1`
+- `7.3-nginx-latest` `7.3-nginx-0.1`
+- `7.4-fpm-latest` `7.4-fpm-0.1`
+- `7.4-apache-latest` `7.4-apache-0.1`
+- `7.4-nginx-latest` `7.4-nginx-0.1`
 
 Usage
 -----
@@ -27,7 +27,7 @@ Usage
 Run the image with docker run command
 
 ```
-$ docker run -dit -p 8000:80 --name enhavo-app enhavo/enhavo-app:7.2-apache
+$ docker run -dit -p 8000:80 --name enhavo-app enhavo/enhavo-app:7.2-apache-latest
 ```
 
 On port 8000 you should see the php info page. 
@@ -55,7 +55,7 @@ missing libraries.
 
 ```
 # Dockerfile
-FROM enhavo/enhavo-app:7.2-apache
+FROM enhavo/enhavo-app:7.2-apache-latest
 
 COPY /path/to/your/php.ini /etc/php/7.2/fpm/php.ini
 RUN apt-get -y install php7.2-ldap

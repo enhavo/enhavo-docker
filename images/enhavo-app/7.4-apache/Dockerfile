@@ -2,7 +2,7 @@ FROM enhavo/enhavo-app:7.4-fpm
 
 CMD ["/sbin/my_init"]
 
-RUN apt -y install apache2 && \
+RUN apt-get -y install apache2 && \
     rm -r -f /var/www/html && \
     mkdir -p /var/www/current/public && \
     a2enmod rewrite && \
