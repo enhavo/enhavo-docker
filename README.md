@@ -10,9 +10,12 @@ Images
 The goal of this repository ist to provide docker images to easy deploy enhavo applications with it.
 So we provide some images that fit to your enhavo project.
 
-- `7.2-fpm` Ubuntu and FPM with PHP Version 7.2
-- `7.2-apache` Ubuntu and Apache with PHP Version 7.2
-- `7.2-nginx` Ubuntu and Nginx with PHP Version 7.2
+- `7.2-fpm` Ubuntu 16.04 and FPM with PHP Version 7.2
+- `7.2-apache` Ubuntu 16.04 and Apache with PHP Version 7.2
+- `7.2-nginx` Ubuntu 16.04 and Nginx with PHP Version 7.2
+- `7.3-fpm` Ubuntu 16.04 and FPM with PHP Version 7.3
+- `7.3-apache` Ubuntu 16.04 and Apache with PHP Version 7.3
+- `7.3-nginx` Ubuntu 16.04 and Nginx with PHP Version 7.3
 
 Usage
 -----
