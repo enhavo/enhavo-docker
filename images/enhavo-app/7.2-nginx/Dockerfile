@@ -2,7 +2,7 @@ FROM enhavo/enhavo-app:7.2-fpm
 
 CMD ["/sbin/my_init"]
 
-RUN apt-get install -y nginx && \
+RUN apt-get -y install nginx && \
     rm -r -f /var/www/html && \
     mkdir -p /var/www/current/public
 
