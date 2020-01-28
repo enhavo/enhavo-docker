@@ -51,7 +51,7 @@ missing libraries.
 FROM enhavo/enhavo-app:7.2-apache
 
 COPY /path/to/your/php.ini /etc/php/7.2/fpm/php.ini
-RUN apt-get install php7.2-ldap
+RUN apt-get -y install php7.2-ldap
 ```
 
 Now just build your image and store it under your custom name
