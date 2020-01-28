@@ -1,4 +1,4 @@
-FROM enhavo/enhavo-app:7.4-fpm
+FROM enhavo/enhavo-app:7.4-fpm-latest
 
 CMD ["/sbin/my_init"]
 
