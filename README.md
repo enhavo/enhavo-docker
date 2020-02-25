@@ -5,7 +5,7 @@
 The enhavo CMS is a open source PHP project on top of the fullstack Symfony framework and uses awesome Sylius components to serve a very flexible software, that can handle most of complex data structure with a clean and usability interface.
 
 Images
-----------
+------
 
 The goal of this repository ist to provide docker images to easy deploy enhavo applications with it.
 So we provide some images that fit to your enhavo project. At least you need enhavo version `>=0.7` to run 
@@ -72,6 +72,14 @@ And run your custom image
 ```
 $ docker run -dit -p 8000:80 --name enhavo-app your_company/custom_name:latest
 ```
+
+**Start with supervisor**
+
+```
+$ docker run -dit -p 8000:80 --env SUPERVISOR=true --name enhavo-app enhavo/enhavo-app:latest
+```
+
+Add your supervisor configs to ``/etc/supervisor/conf.d``
 
 Contribution
 ------------
