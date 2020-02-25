@@ -16,17 +16,19 @@ RUN mkdir /etc/ssh/key && \
     apt-get -y install yarn && \
     apt-get -y install git && \
     apt-get -y install sudo && \
-    apt-get -y install -y ffmpeg && \
-    apt-get -y install -y optipng && \
-    apt-get -y install -y jpegoptim && \
-    apt-get -y install -y gifsicle && \
-    apt-get -y install -y pngquant && \
+    apt-get -y install ffmpeg && \
+    apt-get -y install optipng && \
+    apt-get -y install jpegoptim && \
+    apt-get -y install gifsicle && \
+    apt-get -y install pngquant && \
+    apt-get -y install supervisor && \
     yarn global add svgo
 
 COPY /ssh/sshd_config /etc/ssh/sshd_config
 COPY /my_init.d/00_regen_ssh_host_keys.sh /etc/my_init.d/00_regen_ssh_host_keys.sh
+COPY /my_init.d/00_supervisor.sh /etc/my_init.d/00_supervisor.sh
 RUN chmod 744 /etc/my_init.d/00_regen_ssh_host_keys.sh
 
-VOLUME ["/etc/ssh/key", "/root/.ssh"]
+VOLUME ["/etc/ssh/key", "/root/.ssh", "/etc/supervisor/conf.d"]
 
 EXPOSE 22
