@@ -15,7 +15,7 @@ The goal of ``enhavo/enhavo-app`` image ist to easy deploy enhavo applications w
 So we provide some images that fit to your enhavo project. At least you need enhavo version `>=0.7` to run 
 this images without additional config.
 
-Read more [documentation](./enhavo-app/usage.md) for usage
+Read more [documentation](./images/enhavo-app/usage.md) for usage
 
 Available versions:
 
@@ -34,7 +34,7 @@ Available versions:
 
 The goal of ``enhavo/enhavo-jenkins`` is to provide a jenkins container that can test and deploy enhavo applications.
 
-Read more [documentation](./enhavo-jenkins/usage.md) for usage
+Read more [documentation](./images/enhavo-jenkins/usage.md) for usage
 
 Available versions:
 
