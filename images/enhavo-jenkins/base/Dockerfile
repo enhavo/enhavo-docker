@@ -2,7 +2,8 @@ FROM jenkins/jenkins:2.234
 
 USER root
 
-RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
+RUN apt-get -y update  && \
+    curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
     echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
     apt-get -y install curl dirmngr apt-transport-https lsb-release ca-certificates && \
     curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
@@ -22,7 +23,7 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
     apt-get -y install pngquant && \
     apt-get -y install supervisor && \
     yarn global add svgo
-    
+
 COPY etc/sudoers /etc/sudoers
 
 USER jenkins
