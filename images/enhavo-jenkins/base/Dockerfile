@@ -8,7 +8,7 @@ RUN apt-get update && \
     apt-get install -y vim && \
     apt-get install -y rubygems && \
     apt-get install -y bundler && \
-    apt-get install -y rsync && \
+    apt-get install -y rsync
 
 COPY etc/sudoers /etc/sudoers
 
