@@ -8,6 +8,7 @@ RUN apt-get -y update  && \
     apt-get -y install curl dirmngr apt-transport-https lsb-release ca-certificates && \
     curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
     apt-get -y update  && \
+    apt-get -y install software-properties-common && \
     apt-get -y install ruby && \
     apt-get -y install make && \
     apt-get -y install vim && \
