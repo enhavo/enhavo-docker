@@ -1,3 +1,8 @@
+enhavo-jenkins
+==========
+
+Documentation for the image ``enhavo-jenkins``
+
 Install
 -------
 

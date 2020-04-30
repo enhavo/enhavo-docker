@@ -1,3 +1,8 @@
+enhavo-app
+==========
+
+Documentation for the image ``enhavo-app``
+
 Usage
 -----
 
