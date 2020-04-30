@@ -10,6 +10,6 @@ RUN apt-get update && \
     apt-get install -y bundler && \
     apt-get install -y rsync && \
 
-COPY etc /etc/sudoers
+COPY etc/sudoers /etc/sudoers
 
 USER jenkins
