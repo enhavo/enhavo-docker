@@ -12,4 +12,4 @@ RUN add-apt-repository -y ppa:ondrej/php && \
     apt-get -y install php7.4-dom && \
     apt-get -y install php7.4-intl && \
     apt-get -y install php7.4-zip && \
-    apt-get -y install composer && \
+    apt-get -y install composer
