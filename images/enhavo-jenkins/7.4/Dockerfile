@@ -3,9 +3,8 @@ CMD ["/sbin/my_init"]
 
 USER root
 
-RUN add-apt-repository -y ppa:ondrej/php && \
-    apt-get update && \
-    apt-get -y install php7.4-fpm && \
+RUN apt-get update && \
+    apt-get -y install php7.4 && \
     apt-get -y install php7.4-apcu && \
     apt-get -y install php7.4-mysql && \
     apt-get -y install php7.4-gd && \
@@ -16,4 +15,4 @@ RUN add-apt-repository -y ppa:ondrej/php && \
     apt-get -y install php7.4-zip && \
     apt-get -y install composer
 
-USER jenkins
+USER docker run -it --rm enhavo/enhavo-jenkins:base

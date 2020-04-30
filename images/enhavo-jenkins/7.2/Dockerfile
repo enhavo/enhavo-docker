@@ -3,9 +3,8 @@ CMD ["/sbin/my_init"]
 
 USER root
 
-RUN add-apt-repository -y ppa:ondrej/php && \
-    apt-get update && \
-    apt-get -y install php7.2-fpm && \
+RUN apt-get update && \
+    apt-get -y install php7.2 && \
     apt-get -y install php7.2-apcu && \
     apt-get -y install php7.2-mysql && \
     apt-get -y install php7.2-gd && \
