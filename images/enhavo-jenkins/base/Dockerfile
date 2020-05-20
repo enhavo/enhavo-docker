@@ -28,6 +28,4 @@ RUN apt-get -y update && \
     apt-get -y install supervisor && \
     yarn global add svgo
 
-COPY etc/sudoers /etc/sudoers
-
 USER jenkins

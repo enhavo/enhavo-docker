@@ -1,5 +1,4 @@
 FROM enhavo/enhavo-jenkins:base
-CMD ["/sbin/my_init"]
 
 USER root
 
