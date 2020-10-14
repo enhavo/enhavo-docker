@@ -13,6 +13,4 @@ COPY /index.php /var/www/current/public/index.php
 
 RUN chmod 744 /etc/my_init.d/02_nginx.bash
 
-VOLUME ["/var/www", "/etc/nginx"]
-
 EXPOSE 80

@@ -30,6 +30,4 @@ COPY /my_init.d/00_supervisor.sh /etc/my_init.d/00_supervisor.sh
 RUN chmod 744 /etc/my_init.d/00_regen_ssh_host_keys.sh
 RUN chmod 744 /etc/my_init.d/00_supervisor.sh
 
-VOLUME ["/etc/ssh/key", "/root/.ssh", "/etc/supervisor/conf.d"]
-
 EXPOSE 22

@@ -17,6 +17,4 @@ COPY /index.php /var/www/current/public/index.php
 
 RUN chmod 744 /etc/my_init.d/02_apache2.bash
 
-VOLUME ["/var/www", "/etc/apache2"]
-
 EXPOSE 80
