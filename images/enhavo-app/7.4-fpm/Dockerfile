@@ -9,6 +9,7 @@ RUN add-apt-repository -y ppa:ondrej/php && \
     apt-get -y install php7.4-gd && \
     apt-get -y install php7.4-curl && \
     apt-get -y install php7.4-mbstring && \
+    apt-get -y install php7.4-opcache && \
     apt-get -y install php7.4-dom && \
     apt-get -y install php7.4-intl && \
     apt-get -y install php7.4-zip && \

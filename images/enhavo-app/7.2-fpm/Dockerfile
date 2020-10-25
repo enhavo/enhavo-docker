@@ -9,6 +9,7 @@ RUN add-apt-repository -y ppa:ondrej/php && \
     apt-get -y install php7.2-gd && \
     apt-get -y install php7.2-curl && \
     apt-get -y install php7.2-mbstring && \
+    apt-get -y install php7.2-opcache && \
     apt-get -y install php7.2-dom && \
     apt-get -y install php7.2-intl && \
     apt-get -y install php7.2-zip && \
