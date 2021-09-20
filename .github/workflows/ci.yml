@@ -1,7 +1,6 @@
 name: Continuous Integration
 
 on:
-    push:
     pull_request:
 
 jobs:
@@ -14,29 +13,29 @@ jobs:
             - name: Build base image
               run: docker build --no-cache -t enhavo/enhavo-app:base images/base
 
-            - name: Push the tagged Docker image
+            - name: Build 7.2-fpm image
               run: docker build --no-cache -t enhavo/enhavo-app:7.2-fpm-latest images/7.2-fpm
 
-            - name: Push the tagged Docker image
+            - name: Build 7.2-nginx image
               run: docker build --no-cache -t enhavo/enhavo-app:7.2-nginx-latest images/7.2-nginx
 
-            - name: Push the tagged Docker image
+            - name: Build 7.2-apache image
               run: docker build --no-cache -t enhavo/enhavo-app:7.2-apache-latest images/7.2-apache
 
-            - name: Push the tagged Docker image
+            - name: Build 7.3-fpm image
               run: docker build --no-cache -t enhavo/enhavo-app:7.3-fpm-latest images/7.3-fpm
 
-            - name: Push the tagged Docker image
+            - name: Build 7.3-nginx image
               run: docker build --no-cache -t enhavo/enhavo-app:7.3-nginx-latest images/7.3-nginx
 
-            - name: Push the tagged Docker image
+            - name: Build 7.3-apache image
               run: docker build --no-cache -t enhavo/enhavo-app:7.3-apache-latest images/7.3-apache
 
-            - name: Push the tagged Docker image
+            - name: Build 7.4-fpm image
               run: docker build --no-cache -t enhavo/enhavo-app:7.4-fpm-latest images/7.4-fpm
 
-            - name: Push the tagged Docker image
+            - name: Build 7.4-nginx image
               run: docker build --no-cache -t enhavo/enhavo-app:7.4-nginx-latest images/7.4-nginx
 
-            - name: Push the tagged Docker image
+            - name: Build 7.4-apache image
               run: docker build --no-cache -t enhavo/enhavo-app:7.4-apache-latest images/7.4-apache

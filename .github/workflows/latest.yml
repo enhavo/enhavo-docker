@@ -1,0 +1,26 @@
+name: Build latest
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    name: "Build"
+    strategy:
+      matrix:
+        version: [ 7.2, 7.3, 7.4 ]
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Build base image
+        run: docker build --no-cache -t enhavo/enhavo-app:base images/base
+
+      - name: Build ${{ matrix.version }}-fpm image
+        run: docker build --no-cache -t enhavo/enhavo-app:${{ matrix.version }}-fpm-latest images/${{ matrix.version }}-fpm
+
+      - name: Build ${{ matrix.version }}-nginx image
+        run: docker build --no-cache -t enhavo/enhavo-app:${{ matrix.version }}-nginx-latest images/${{ matrix.version }}-nginx
+
+      - name: Build ${{ matrix.version }}-apache image
+        run: docker build --no-cache -t enhavo/enhavo-app:${{ matrix.version }}-apache-latest images/${{ matrix.version }}-apache
