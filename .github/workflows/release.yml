@@ -63,32 +63,32 @@ jobs:
       - name: Show Version
         run: echo ${{ env.VERSION }}
 
-#      - name: Login to DockerHub Registry
-#        run: echo ${{ secrets.DOCKER_HUB_PASSWORD }} | docker login -u ${{ secrets.DOCKER_HUB_USER }} --password-stdin
-#
-#      - name: Push 7.2-nginx image
-#        run: docker push enhavo/enhavo-app:7.2-nginx-${{ env.VERSION }}
-#
-#      - name: Push 7.2-fpm image
-#        run: docker push enhavo/enhavo-app:7.2-fpm-${{ env.VERSION }}
-#
-#      - name: Push 7.2-apache image
-#        run: docker push enhavo/enhavo-app:7.2-apache-${{ env.VERSION }}
-#
-#      - name: Push 7.3-nginx image
-#        run: docker push enhavo/enhavo-app:7.3-nginx-${{ env.VERSION }}
-#
-#      - name: Push 7.3-apache image
-#        run: docker push enhavo/enhavo-app:7.3-apache-${{ env.VERSION }}
-#
-#      - name: Push 7.3-fpm image
-#        run: docker push enhavo/enhavo-app:7.3-fpm-${{ env.VERSION }}
-#
-#      - name: Push 7.4-nginx image
-#        run: docker push enhavo/enhavo-app:7.4-nginx-${{ env.VERSION }}
-#
-#      - name: Push 7.4-apache image
-#        run: docker push enhavo/enhavo-app:7.4-apache-${{ env.VERSION }}
-#
-#      - name: Push 7.4-fpm image
-#        run: docker push enhavo/enhavo-app:7.4-fpm-${{ env.VERSION }}
+      - name: Login to DockerHub Registry
+        run: echo ${{ secrets.DOCKER_HUB_PASSWORD }} | docker login -u ${{ secrets.DOCKER_HUB_USER }} --password-stdin
+
+      - name: Push 7.2-nginx image
+        run: docker push enhavo/enhavo-app:7.2-nginx-${{ env.VERSION }}
+
+      - name: Push 7.2-fpm image
+        run: docker push enhavo/enhavo-app:7.2-fpm-${{ env.VERSION }}
+
+      - name: Push 7.2-apache image
+        run: docker push enhavo/enhavo-app:7.2-apache-${{ env.VERSION }}
+
+      - name: Push 7.3-nginx image
+        run: docker push enhavo/enhavo-app:7.3-nginx-${{ env.VERSION }}
+
+      - name: Push 7.3-apache image
+        run: docker push enhavo/enhavo-app:7.3-apache-${{ env.VERSION }}
+
+      - name: Push 7.3-fpm image
+        run: docker push enhavo/enhavo-app:7.3-fpm-${{ env.VERSION }}
+
+      - name: Push 7.4-nginx image
+        run: docker push enhavo/enhavo-app:7.4-nginx-${{ env.VERSION }}
+
+      - name: Push 7.4-apache image
+        run: docker push enhavo/enhavo-app:7.4-apache-${{ env.VERSION }}
+
+      - name: Push 7.4-fpm image
+        run: docker push enhavo/enhavo-app:7.4-fpm-${{ env.VERSION }}
