@@ -1,0 +1,42 @@
+name: Continuous Integration
+
+on:
+    push:
+    pull_request:
+
+jobs:
+    build:
+        runs-on: ubuntu-20.04
+        name: "Build"
+        steps:
+            - uses: actions/checkout@v1
+            
+            - name: Build base image
+              run: docker build --no-cache -t enhavo/enhavo-app:base base
+
+            - name: Push the tagged Docker image
+              run: docker build --no-cache -t enhavo/enhavo-app:7.2-fpm-latest 7.2-fpm
+
+            - name: Push the tagged Docker image
+              run: docker build --no-cache -t enhavo/enhavo-app:7.2-nginx-latest 7.2-nginx
+
+            - name: Push the tagged Docker image
+              run: docker build --no-cache -t enhavo/enhavo-app:7.2-apache-latest 7.2-apache
+
+            - name: Push the tagged Docker image
+              run: docker build --no-cache -t enhavo/enhavo-app:7.3-fpm-latest 7.3-fpm
+
+            - name: Push the tagged Docker image
+              run: docker build --no-cache -t enhavo/enhavo-app:7.3-nginx-latest 7.3-nginx
+
+            - name: Push the tagged Docker image
+              run: docker build --no-cache -t enhavo/enhavo-app:7.3-apache-latest 7.3-apache
+
+            - name: Push the tagged Docker image
+              run: docker build --no-cache -t enhavo/enhavo-app:7.4-fpm-latest 7.4-fpm
+
+            - name: Push the tagged Docker image
+              run: docker build --no-cache -t enhavo/enhavo-app:7.4-nginx-latest 7.4-nginx
+
+            - name: Push the tagged Docker image
+              run: docker build --no-cache -t enhavo/enhavo-app:7.4-apache-latest 7.4-apache
