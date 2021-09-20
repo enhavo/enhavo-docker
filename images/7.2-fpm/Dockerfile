@@ -13,7 +13,10 @@ RUN add-apt-repository -y ppa:ondrej/php && \
     apt-get -y install php7.2-dom && \
     apt-get -y install php7.2-intl && \
     apt-get -y install php7.2-zip && \
-    apt-get -y install composer && \
+    php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && \
+    php composer-setup.php && \
+    php -r "unlink('composer-setup.php');" && \
+    mv composer.phar /usr/local/bin/composer && \
     mkdir /var/log/php7.2-fpm && \
     touch /var/log/php7.2-fpm/slow.log
 
