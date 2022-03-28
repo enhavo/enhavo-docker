@@ -42,6 +42,15 @@ jobs:
       - name: Build 7.4-apache image
         run: docker build --no-cache -t enhavo/enhavo-app:7.4-apache-latest images/7.4-apache
 
+      - name: Build 8.0-fpm image
+        run: docker build --no-cache -t enhavo/enhavo-app:7.4-fpm-latest images/7.4-fpm
+
+      - name: Build 8.0-nginx image
+        run: docker build --no-cache -t enhavo/enhavo-app:8.0-nginx-latest images/8.0-nginx
+
+      - name: Build 8.0-apache image
+        run: docker build --no-cache -t enhavo/enhavo-app:8.0-apache-latest images/8.0-apache
+
       - name: Login to DockerHub Registry
         run: echo ${{ secrets.DOCKER_HUB_PASSWORD }} | docker login -u ${{ secrets.DOCKER_HUB_USER }} --password-stdin
 
@@ -71,3 +80,12 @@ jobs:
 
       - name: Push 7.4-fpm image
         run: docker push enhavo/enhavo-app:7.4-fpm-latest
+
+      - name: Push 8.0-nginx image
+        run: docker push enhavo/enhavo-app:8.0-nginx-latest
+
+      - name: Push 8.0-apache image
+        run: docker push enhavo/enhavo-app:8.0-apache-latest
+
+      - name: Push 8.0-fpm image
+        run: docker push enhavo/enhavo-app:8.0-fpm-latest
