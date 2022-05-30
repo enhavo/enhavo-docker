@@ -13,6 +13,7 @@ RUN add-apt-repository -y ppa:ondrej/php && \
     apt-get -y install php7.2-dom && \
     apt-get -y install php7.2-intl && \
     apt-get -y install php7.2-zip && \
+    update-alternatives --set php /usr/bin/php7.2 && \
     php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && \
     php composer-setup.php && \
     php -r "unlink('composer-setup.php');" && \
@@ -22,5 +23,6 @@ RUN add-apt-repository -y ppa:ondrej/php && \
 
 COPY /www.conf /etc/php/7.2/fpm/pool.d/www.conf
 COPY /01_php-fpm.bash /etc/my_init.d/01_php-fpm.bash
+#COPY /td-agent/config.d/fpm.conf /etc/td-agent/config.d/fpm.conf
 
 RUN chmod 744 /etc/my_init.d/01_php-fpm.bash
