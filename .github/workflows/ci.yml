@@ -48,3 +48,12 @@ jobs:
 
             - name: Build 8.0-apache image
               run: docker build --no-cache -t enhavo/enhavo-app:8.0-apache-latest images/8.0-apache
+
+            - name: Build 8.1-fpm image
+              run: docker build --no-cache -t enhavo/enhavo-app:8.1-fpm-latest images/8.1-fpm
+
+            - name: Build 8.1-nginx image
+              run: docker build --no-cache -t enhavo/enhavo-app:8.1-nginx-latest images/8.1-nginx
+
+            - name: Build 8.1-apache image
+              run: docker build --no-cache -t enhavo/enhavo-app:8.1-apache-latest images/8.1-apache
