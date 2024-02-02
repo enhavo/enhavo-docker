@@ -22,6 +22,8 @@ RUN mkdir /etc/ssh/key && \
     apt-get -y install gifsicle && \
     apt-get -y install pngquant && \
     apt-get -y install supervisor && \
+    apt-get -y install unzip && \
+    apt-get -y install rsync && \
     yarn global add svgo && \
     curl -fsSL https://toolbelt.treasuredata.com/sh/install-ubuntu-bionic-td-agent4.sh | sh && \
     mkdir /etc/td-agent/config.d && \
