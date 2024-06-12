@@ -15,21 +15,22 @@ Read more [documentation](./images/enhavo-app/usage.md) for usage
 
 Available versions:
 
-- `7.2-fpm-latest` `7.2-fpm-0.5`
-- `7.2-apache-latest` `7.2-apache-0.5`
-- `7.2-nginx-latest` `7.2-nginx-0.5`
-- `7.3-fpm-latest` `7.3-fpm-0.5`
-- `7.3-apache-latest` `7.3-apache-0.5`
-- `7.3-nginx-latest` `7.3-nginx-0.5`
-- `7.4-fpm-latest` `7.4-fpm-0.5`
-- `7.4-apache-latest` `7.4-apache-0.5`
-- `7.4-nginx-latest` `7.4-nginx-0.5`
-- `8.0-fpm-latest` `8.0-fpm-0.5`
-- `8.0-apache-latest` `8.0-apache-0.5`
-- `8.0-nginx-latest` `8.0-nginx-0.5`
-- `8.1-fpm-latest` `8.1-fpm-0.5`
-- `8.1-apache-latest` `8.1-apache-0.5`
-- `8.1-nginx-latest` `8.1-nginx-0.5`
+
+- `7.4-fpm-latest` `7.4-fpm-0.6`
+- `7.4-apache-latest` `7.4-apache-0.6`
+- `7.4-nginx-latest` `7.4-nginx-0.6`
+- `8.0-fpm-latest` `8.0-fpm-0.6`
+- `8.0-apache-latest` `8.0-apache-0.6`
+- `8.0-nginx-latest` `8.0-nginx-0.6`
+- `8.1-fpm-latest` `8.1-fpm-0.6`
+- `8.1-apache-latest` `8.1-apache-0.6`
+- `8.1-nginx-latest` `8.1-nginx-0.6`
+- `8.2-fpm-latest` `8.2-fpm-0.6`
+- `8.2-apache-latest` `8.2-apache-0.6`
+- `8.2-nginx-latest` `8.2-nginx-0.6`
+- `8.3-fpm-latest` `8.3-fpm-0.6`
+- `8.3-apache-latest` `8.3-apache-0.6`
+- `8.3-nginx-latest` `8.3-nginx-0.6`
 
 
 Usage
