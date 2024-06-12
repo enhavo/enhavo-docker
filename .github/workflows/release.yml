@@ -60,6 +60,24 @@ jobs:
       - name: Build 8.1-apache image
         run: docker build --no-cache -t enhavo/enhavo-app:8.1-apache-latest images/8.1-apache
 
+      - name: Build 8.2-fpm image
+        run: docker build --no-cache -t enhavo/enhavo-app:8.2-fpm-latest images/8.2-fpm
+
+      - name: Build 8.2-nginx image
+        run: docker build --no-cache -t enhavo/enhavo-app:8.2-nginx-latest images/8.2-nginx
+
+      - name: Build 8.2-apache image
+        run: docker build --no-cache -t enhavo/enhavo-app:8.2-apache-latest images/8.2-apache
+
+      - name: Build 8.3-fpm image
+        run: docker build --no-cache -t enhavo/enhavo-app:8.3-fpm-latest images/8.3-fpm
+
+      - name: Build 8.3-nginx image
+        run: docker build --no-cache -t enhavo/enhavo-app:8.3-nginx-latest images/8.3-nginx
+
+      - name: Build 8.3-apache image
+        run: docker build --no-cache -t enhavo/enhavo-app:8.3-apache-latest images/8.3-apache
+
       - name: Set env version
         run: echo "VERSION=$(echo ${GITHUB_REF#refs/*/} | sed 's/v//g')" >> $GITHUB_ENV
 
@@ -80,7 +98,12 @@ jobs:
           docker tag enhavo/enhavo-app:8.1-nginx-latest "enhavo/enhavo-app:8.1-nginx-${{ env.VERSION }}"
           docker tag enhavo/enhavo-app:8.1-apache-latest "enhavo/enhavo-app:8.1-apache-${{ env.VERSION }}"
           docker tag enhavo/enhavo-app:8.1-fpm-latest "enhavo/enhavo-app:8.1-fpm-${{ env.VERSION }}"
-
+          docker tag enhavo/enhavo-app:8.2-nginx-latest "enhavo/enhavo-app:8.2-nginx-${{ env.VERSION }}"
+          docker tag enhavo/enhavo-app:8.2-apache-latest "enhavo/enhavo-app:8.2-apache-${{ env.VERSION }}"
+          docker tag enhavo/enhavo-app:8.2-fpm-latest "enhavo/enhavo-app:8.2-fpm-${{ env.VERSION }}"
+          docker tag enhavo/enhavo-app:8.3-nginx-latest "enhavo/enhavo-app:8.3-nginx-${{ env.VERSION }}"
+          docker tag enhavo/enhavo-app:8.3-apache-latest "enhavo/enhavo-app:8.3-apache-${{ env.VERSION }}"
+          docker tag enhavo/enhavo-app:8.3-fpm-latest "enhavo/enhavo-app:8.3-fpm-${{ env.VERSION }}"
       - name: Show images
         run: docker images
 
@@ -134,3 +157,21 @@ jobs:
 
       - name: Push 8.1-fpm image
         run: docker push enhavo/enhavo-app:8.1-fpm-${{ env.VERSION }}
+
+      - name: Push 8.2-nginx image
+        run: docker push enhavo/enhavo-app:8.2-nginx-${{ env.VERSION }}
+
+      - name: Push 8.2-apache image
+        run: docker push enhavo/enhavo-app:8.2-apache-${{ env.VERSION }}
+
+      - name: Push 8.2-fpm image
+        run: docker push enhavo/enhavo-app:8.2-fpm-${{ env.VERSION }}
+        
+      - name: Push 8.3-nginx image
+        run: docker push enhavo/enhavo-app:8.3-nginx-${{ env.VERSION }}
+
+      - name: Push 8.3-apache image
+        run: docker push enhavo/enhavo-app:8.3-apache-${{ env.VERSION }}
+
+      - name: Push 8.3-fpm image
+        run: docker push enhavo/enhavo-app:8.3-fpm-${{ env.VERSION }}
