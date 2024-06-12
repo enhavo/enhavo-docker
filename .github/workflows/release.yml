@@ -15,24 +15,6 @@ jobs:
       - name: Build base image
         run: docker build --no-cache -t enhavo/enhavo-app:base images/base
 
-      - name: Build 7.2-fpm image
-        run: docker build --no-cache -t enhavo/enhavo-app:7.2-fpm-latest images/7.2-fpm
-
-      - name: Build 7.2-nginx image
-        run: docker build --no-cache -t enhavo/enhavo-app:7.2-nginx-latest images/7.2-nginx
-
-      - name: Build 7.2-apache image
-        run: docker build --no-cache -t enhavo/enhavo-app:7.2-apache-latest images/7.2-apache
-
-      - name: Build 7.3-fpm image
-        run: docker build --no-cache -t enhavo/enhavo-app:7.3-fpm-latest images/7.3-fpm
-
-      - name: Build 7.3-nginx image
-        run: docker build --no-cache -t enhavo/enhavo-app:7.3-nginx-latest images/7.3-nginx
-
-      - name: Build 7.3-apache image
-        run: docker build --no-cache -t enhavo/enhavo-app:7.3-apache-latest images/7.3-apache
-
       - name: Build 7.4-fpm image
         run: docker build --no-cache -t enhavo/enhavo-app:7.4-fpm-latest images/7.4-fpm
 
@@ -83,12 +65,6 @@ jobs:
 
       - name: Tag images
         run: |
-          docker tag enhavo/enhavo-app:7.2-nginx-latest "enhavo/enhavo-app:7.2-nginx-${{ env.VERSION }}"
-          docker tag enhavo/enhavo-app:7.2-apache-latest "enhavo/enhavo-app:7.2-apache-${{ env.VERSION }}"
-          docker tag enhavo/enhavo-app:7.2-fpm-latest "enhavo/enhavo-app:7.2-fpm-${{ env.VERSION }}"
-          docker tag enhavo/enhavo-app:7.3-nginx-latest "enhavo/enhavo-app:7.3-nginx-${{ env.VERSION }}"
-          docker tag enhavo/enhavo-app:7.3-apache-latest "enhavo/enhavo-app:7.3-apache-${{ env.VERSION }}"
-          docker tag enhavo/enhavo-app:7.3-fpm-latest "enhavo/enhavo-app:7.3-fpm-${{ env.VERSION }}"
           docker tag enhavo/enhavo-app:7.4-nginx-latest "enhavo/enhavo-app:7.4-nginx-${{ env.VERSION }}"
           docker tag enhavo/enhavo-app:7.4-apache-latest "enhavo/enhavo-app:7.4-apache-${{ env.VERSION }}"
           docker tag enhavo/enhavo-app:7.4-fpm-latest "enhavo/enhavo-app:7.4-fpm-${{ env.VERSION }}"
@@ -112,24 +88,6 @@ jobs:
 
       - name: Login to DockerHub Registry
         run: echo ${{ secrets.DOCKER_HUB_PASSWORD }} | docker login -u ${{ secrets.DOCKER_HUB_USER }} --password-stdin
-
-      - name: Push 7.2-nginx image
-        run: docker push enhavo/enhavo-app:7.2-nginx-${{ env.VERSION }}
-
-      - name: Push 7.2-fpm image
-        run: docker push enhavo/enhavo-app:7.2-fpm-${{ env.VERSION }}
-
-      - name: Push 7.2-apache image
-        run: docker push enhavo/enhavo-app:7.2-apache-${{ env.VERSION }}
-
-      - name: Push 7.3-nginx image
-        run: docker push enhavo/enhavo-app:7.3-nginx-${{ env.VERSION }}
-
-      - name: Push 7.3-apache image
-        run: docker push enhavo/enhavo-app:7.3-apache-${{ env.VERSION }}
-
-      - name: Push 7.3-fpm image
-        run: docker push enhavo/enhavo-app:7.3-fpm-${{ env.VERSION }}
 
       - name: Push 7.4-nginx image
         run: docker push enhavo/enhavo-app:7.4-nginx-${{ env.VERSION }}
