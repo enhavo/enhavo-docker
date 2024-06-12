@@ -1,4 +1,4 @@
-FROM phusion/baseimage:bionic-1.0.0
+FROM phusion/baseimage:jammy-1.0.4
 CMD ["/sbin/my_init"]
 
 RUN mkdir /etc/ssh/key && \
@@ -25,7 +25,7 @@ RUN mkdir /etc/ssh/key && \
     apt-get -y install unzip && \
     apt-get -y install rsync && \
     yarn global add svgo && \
-    curl -fsSL https://toolbelt.treasuredata.com/sh/install-ubuntu-bionic-td-agent4.sh | sh && \
+    curl -fsSL https://toolbelt.treasuredata.com/sh/install-ubuntu-jammy-td-agent4.sh | sh && \
     mkdir /etc/td-agent/config.d && \
     apt-get -y --allow-releaseinfo-change update # Because treasuredata repository has a changed message
 
