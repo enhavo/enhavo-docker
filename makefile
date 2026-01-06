@@ -8,7 +8,7 @@
   php85-fpm-build php85-nginx-build php85-apache-build
 
 NO_CACHE ?= --no-cache
-PLATFORM ?= linux/amd64,linux/arm64,linux/arm/v7
+PLATFORM ?= linux/amd64,linux/arm64
 VERSION ?= latest
 
 build-all: base \
