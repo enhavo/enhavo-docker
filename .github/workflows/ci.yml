@@ -5,55 +5,10 @@ on:
 
 jobs:
     build:
-        runs-on: ubuntu-20.04
-        name: "Build"
+        runs-on: ubuntu-24.04
+        name: "Build All"
         steps:
             - uses: actions/checkout@v1
 
-            - name: Build base image
-              run: docker build --no-cache -t enhavo/enhavo-app:base images/base
-
-            - name: Build 7.4-fpm image
-              run: docker build --no-cache -t enhavo/enhavo-app:7.4-fpm-latest images/7.4-fpm
-
-            - name: Build 7.4-nginx image
-              run: docker build --no-cache -t enhavo/enhavo-app:7.4-nginx-latest images/7.4-nginx
-
-            - name: Build 7.4-apache image
-              run: docker build --no-cache -t enhavo/enhavo-app:7.4-apache-latest images/7.4-apache
-
-            - name: Build 8.0-fpm image
-              run: docker build --no-cache -t enhavo/enhavo-app:8.0-fpm-latest images/8.0-fpm
-
-            - name: Build 8.0-nginx image
-              run: docker build --no-cache -t enhavo/enhavo-app:8.0-nginx-latest images/8.0-nginx
-
-            - name: Build 8.0-apache image
-              run: docker build --no-cache -t enhavo/enhavo-app:8.0-apache-latest images/8.0-apache
-
-            - name: Build 8.1-fpm image
-              run: docker build --no-cache -t enhavo/enhavo-app:8.1-fpm-latest images/8.1-fpm
-
-            - name: Build 8.1-nginx image
-              run: docker build --no-cache -t enhavo/enhavo-app:8.1-nginx-latest images/8.1-nginx
-
-            - name: Build 8.1-apache image
-              run: docker build --no-cache -t enhavo/enhavo-app:8.1-apache-latest images/8.1-apache
-
-            - name: Build 8.2-fpm image
-              run: docker build --no-cache -t enhavo/enhavo-app:8.2-fpm-latest images/8.2-fpm
-
-            - name: Build 8.2-nginx image
-              run: docker build --no-cache -t enhavo/enhavo-app:8.2-nginx-latest images/8.2-nginx
-
-            - name: Build 8.2-apache image
-              run: docker build --no-cache -t enhavo/enhavo-app:8.2-apache-latest images/8.2-apache
-              
-            - name: Build 8.3-fpm image
-              run: docker build --no-cache -t enhavo/enhavo-app:8.3-fpm-latest images/8.3-fpm
-
-            - name: Build 8.3-nginx image
-              run: docker build --no-cache -t enhavo/enhavo-app:8.3-nginx-latest images/8.3-nginx
-
-            - name: Build 8.3-apache image
-              run: docker build --no-cache -t enhavo/enhavo-app:8.3-apache-latest images/8.3-apache
+            - name: Build all
+              run: make build-all
