@@ -25,21 +25,13 @@ RUN mkdir /etc/ssh/key && \
     apt-get -y install unzip && \
     apt-get -y install rsync && \
     yarn global add svgo && \
-    curl -fsSL https://toolbelt.treasuredata.com/sh/install-ubuntu-jammy-td-agent4.sh | sh && \
-    mkdir /etc/td-agent/config.d && \
-    apt-get -y --allow-releaseinfo-change update # Because treasuredata repository has a changed message
-
-ENV FLUENTD_FLUSH_INTERVAL 2s
-ENV FLUENTD_FLUSH_MODE interval
+    apt-get -y --allow-releaseinfo-change update
 
 COPY /ssh/sshd_config /etc/ssh/sshd_config
 COPY /my_init.d/00_regen_ssh_host_keys.sh /etc/my_init.d/00_regen_ssh_host_keys.sh
 COPY /my_init.d/00_supervisor.sh /etc/my_init.d/00_supervisor.sh
-COPY /my_init.d/00_td-agent.sh /etc/my_init.d/00_td-agent.sh
-COPY /td-agent/td-agent.conf /etc/td-agent/td-agent.conf
 
 RUN chmod 744 /etc/my_init.d/00_regen_ssh_host_keys.sh && \
-    chmod 744 /etc/my_init.d/00_supervisor.sh && \
-    chmod 744 /etc/my_init.d/00_td-agent.sh
+    chmod 744 /etc/my_init.d/00_supervisor.sh
 
 EXPOSE 22

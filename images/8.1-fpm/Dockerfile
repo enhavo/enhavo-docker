@@ -23,6 +23,5 @@ RUN add-apt-repository -y ppa:ondrej/php && \
 
 COPY /www.conf /etc/php/8.1/fpm/pool.d/www.conf
 COPY /01_php-fpm.bash /etc/my_init.d/01_php-fpm.bash
-#COPY /td-agent/config.d/fpm.conf /etc/td-agent/config.d/fpm.conf
 
 RUN chmod 744 /etc/my_init.d/01_php-fpm.bash

@@ -16,7 +16,6 @@ RUN add-apt-repository -y ppa:ondrej/apache2 && \
 COPY /02_apache2.bash /etc/my_init.d/02_apache2.bash
 COPY /000-default.conf /etc/apache2/sites-available/000-default.conf
 COPY /index.php /var/www/current/public/index.php
-COPY /td-agent/config.d/apache.conf /etc/td-agent/config.d/apache.conf
 
 RUN chmod 744 /etc/my_init.d/02_apache2.bash
 
