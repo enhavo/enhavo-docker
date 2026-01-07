@@ -37,130 +37,130 @@ php74-fpm-build:
 	docker buildx build --platform $(PLATFORM) $(NO_CACHE) -t enhavo/enhavo-app:7.4-fpm-latest images/7.4-fpm
 php74-fpm-push:
 	docker tag enhavo/enhavo-app:7.4-fpm-latest enhavo/enhavo-app:7.4-fpm-$(VERSION)
-	docker push enhavo/enhavo-app:7.4-fpm-latest
+	docker push enhavo/enhavo-app:7.4-fpm-$(VERSION)
 
 php74-nginx-build:
 	docker buildx build --platform $(PLATFORM) $(NO_CACHE) -t enhavo/enhavo-app:7.4-nginx-latest images/7.4-nginx
 php74-nginx-push:
 	docker tag enhavo/enhavo-app:7.4-nginx-latest enhavo/enhavo-app:7.4-nginx-$(VERSION)
-	docker push enhavo/enhavo-app:7.4-nginx-latest
+	docker push enhavo/enhavo-app:7.4-nginx-$(VERSION)
 
 php74-apache-build:
 	docker buildx build --platform $(PLATFORM) $(NO_CACHE) -t enhavo/enhavo-app:7.4-apache-latest images/7.4-apache
 php74-apache-push:
 	docker tag enhavo/enhavo-app:7.4-apache-latest enhavo/enhavo-app:7.4-apache-$(VERSION)
-	docker push enhavo/enhavo-app:7.4-apache-latest
+	docker push enhavo/enhavo-app:7.4-apache-$(VERSION)
 
 # 8.0
 php80-fpm-build:
 	docker buildx build --platform $(PLATFORM) $(NO_CACHE) -t enhavo/enhavo-app:8.0-fpm-latest images/8.0-fpm
 php80-fpm-push:
 	docker tag enhavo/enhavo-app:8.0-fpm-latest enhavo/enhavo-app:8.0-fpm-$(VERSION)
-	docker push enhavo/enhavo-app:8.0-fpm-latest
+	docker push enhavo/enhavo-app:8.0-fpm-$(VERSION)
 
 php80-nginx-build:
 	docker buildx build --platform $(PLATFORM) $(NO_CACHE) -t enhavo/enhavo-app:8.0-nginx-latest images/8.0-nginx
 php80-nginx-push:
 	docker tag enhavo/enhavo-app:8.0-nginx-latest enhavo/enhavo-app:8.0-nginx-$(VERSION)
-	docker push enhavo/enhavo-app:8.0-nginx-latest
+	docker push enhavo/enhavo-app:8.0-nginx-$(VERSION)
 
 php80-apache-build:
 	docker buildx build --platform $(PLATFORM) $(NO_CACHE) -t enhavo/enhavo-app:8.0-apache-latest images/8.0-apache
 php80-apache-push:
 	docker tag enhavo/enhavo-app:8.0-apache-latest enhavo/enhavo-app:8.0-apache-$(VERSION)
-	docker push enhavo/enhavo-app:8.0-apache-latest
+	docker push enhavo/enhavo-app:8.0-apache-$(VERSION)
 
 # 8.1
 php81-fpm-build:
 	docker buildx build --platform $(PLATFORM) $(NO_CACHE) -t enhavo/enhavo-app:8.1-fpm-latest images/8.1-fpm
 php81-fpm-push:
 	docker tag enhavo/enhavo-app:8.1-fpm-latest enhavo/enhavo-app:8.1-fpm-$(VERSION)
-	docker push enhavo/enhavo-app:8.1-fpm-latest
+	docker push enhavo/enhavo-app:8.1-fpm-$(VERSION)
 
 php81-nginx-build:
 	docker buildx build --platform $(PLATFORM) $(NO_CACHE) -t enhavo/enhavo-app:8.1-nginx-latest images/8.1-nginx
 php81-nginx-push:
 	docker tag enhavo/enhavo-app:8.1-nginx-latest enhavo/enhavo-app:8.1-nginx-$(VERSION)
-	docker push enhavo/enhavo-app:8.1-nginx-latest
+	docker push enhavo/enhavo-app:8.1-nginx-$(VERSION)
 
 php81-apache-build:
 	docker buildx build --platform $(PLATFORM) $(NO_CACHE) -t enhavo/enhavo-app:8.1-apache-latest images/8.1-apache
 php81-apache-push:
 	docker tag enhavo/enhavo-app:8.1-apache-latest enhavo/enhavo-app:8.1-apache-$(VERSION)
-	docker push enhavo/enhavo-app:8.1-apache-latest
+	docker push enhavo/enhavo-app:8.1-apache-$(VERSION)
 
 # 8.2
 php82-fpm-build:
 	docker buildx build --platform $(PLATFORM) $(NO_CACHE) -t enhavo/enhavo-app:8.2-fpm-latest images/8.2-fpm
 php82-fpm-push:
 	docker tag enhavo/enhavo-app:8.2-fpm-latest enhavo/enhavo-app:8.2-fpm-$(VERSION)
-	docker push enhavo/enhavo-app:8.2-fpm-latest
+	docker push enhavo/enhavo-app:8.2-fpm-$(VERSION)
 
 php82-nginx-build:
 	docker buildx build --platform $(PLATFORM) $(NO_CACHE) -t enhavo/enhavo-app:8.2-nginx-latest images/8.2-nginx
 php82-nginx-push:
 	docker tag enhavo/enhavo-app:8.2-nginx-latest enhavo/enhavo-app:8.2-nginx-$(VERSION)
-	docker push enhavo/enhavo-app:8.2-nginx-latest
+	docker push enhavo/enhavo-app:8.2-nginx-$(VERSION)
 
 php82-apache-build:
 	docker buildx build --platform $(PLATFORM) $(NO_CACHE) -t enhavo/enhavo-app:8.2-apache-latest images/8.2-apache
 php82-apache-push:
 	docker tag enhavo/enhavo-app:8.2-apache-latest enhavo/enhavo-app:8.2-apache-$(VERSION)
-	docker push enhavo/enhavo-app:8.2-apache-latest
+	docker push enhavo/enhavo-app:8.2-apache-$(VERSION)
 
 # 8.3
 php83-fpm-build:
 	docker buildx build --platform $(PLATFORM) $(NO_CACHE) -t enhavo/enhavo-app:8.3-fpm-latest images/8.3-fpm
 php83-fpm-push:
 	docker tag enhavo/enhavo-app:8.3-fpm-latest enhavo/enhavo-app:8.3-fpm-$(VERSION)
-	docker push enhavo/enhavo-app:8.3-fpm-latest
+	docker push enhavo/enhavo-app:8.3-fpm-$(VERSION)
 
 php83-nginx-build:
 	docker buildx build --platform $(PLATFORM) $(NO_CACHE) -t enhavo/enhavo-app:8.3-nginx-latest images/8.3-nginx
 php83-nginx-push:
 	docker tag enhavo/enhavo-app:8.3-nginx-latest enhavo/enhavo-app:8.3-nginx-$(VERSION)
-	docker push enhavo/enhavo-app:8.3-nginx-latest
+	docker push enhavo/enhavo-app:8.3-nginx-$(VERSION)
 
 php83-apache-build:
 	docker buildx build --platform $(PLATFORM) $(NO_CACHE) -t enhavo/enhavo-app:8.3-apache-latest images/8.3-apache
 php83-apache-push:
 	docker tag enhavo/enhavo-app:8.3-apache-latest enhavo/enhavo-app:8.3-apache-$(VERSION)
-	docker push enhavo/enhavo-app:8.3-apache-latest
+	docker push enhavo/enhavo-app:8.3-apache-$(VERSION)
 
 # 8.4
 php84-fpm-build:
 	docker buildx build --platform $(PLATFORM) $(NO_CACHE) -t enhavo/enhavo-app:8.4-fpm-latest images/8.4-fpm
 php84-fpm-push:
 	docker tag enhavo/enhavo-app:8.4-fpm-latest enhavo/enhavo-app:8.4-fpm-$(VERSION)
-	docker push enhavo/enhavo-app:8.4-fpm-latest
+	docker push enhavo/enhavo-app:8.4-fpm-$(VERSION)
 
 php84-nginx-build:
 	docker buildx build --platform $(PLATFORM) $(NO_CACHE) -t enhavo/enhavo-app:8.4-nginx-latest images/8.4-nginx
 php84-nginx-push:
 	docker tag enhavo/enhavo-app:8.4-nginx-latest enhavo/enhavo-app:8.4-nginx-$(VERSION)
-	docker push enhavo/enhavo-app:8.4-nginx-latest
+	docker push enhavo/enhavo-app:8.4-nginx-$(VERSION)
 
 php84-apache-build:
 	docker buildx build --platform $(PLATFORM) $(NO_CACHE) -t enhavo/enhavo-app:8.4-apache-latest images/8.4-apache
 php84-apache-push:
 	docker tag enhavo/enhavo-app:8.4-apache-latest enhavo/enhavo-app:8.4-apache-$(VERSION)
-	docker push enhavo/enhavo-app:8.4-apache-latest
+	docker push enhavo/enhavo-app:8.4-apache-$(VERSION)
 
 # 8.5
 php85-fpm-build:
 	docker buildx build --platform $(PLATFORM) $(NO_CACHE) -t enhavo/enhavo-app:8.5-fpm-latest images/8.5-fpm
 php85-fpm-push:
 	docker tag enhavo/enhavo-app:8.5-fpm-latest enhavo/enhavo-app:8.5-fpm-$(VERSION)
-	docker push enhavo/enhavo-app:8.5-fpm-latest
+	docker push enhavo/enhavo-app:8.5-fpm-$(VERSION)
 
 php85-nginx-build:
 	docker buildx build --platform $(PLATFORM) $(NO_CACHE) -t enhavo/enhavo-app:8.5-nginx-latest images/8.5-nginx
 php85-nginx-push:
 	docker tag enhavo/enhavo-app:8.5-nginx-latest enhavo/enhavo-app:8.5-nginx-$(VERSION)
-	docker push enhavo/enhavo-app:8.5-nginx-latest
+	docker push enhavo/enhavo-app:8.5-nginx-$(VERSION)
 
 php85-apache-build:
 	docker buildx build --platform $(PLATFORM) $(NO_CACHE) -t enhavo/enhavo-app:8.5-apache-latest images/8.5-apache
 php85-apache-push:
 	docker tag enhavo/enhavo-app:8.5-apache-latest enhavo/enhavo-app:8.5-apache-$(VERSION)
-	docker push enhavo/enhavo-app:8.5-apache-latest
+	docker push enhavo/enhavo-app:8.5-apache-$(VERSION)
