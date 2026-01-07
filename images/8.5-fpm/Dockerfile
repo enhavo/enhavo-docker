@@ -9,7 +9,6 @@ RUN add-apt-repository -y ppa:ondrej/php && \
     apt-get -y install php8.5-gd && \
     apt-get -y install php8.5-curl && \
     apt-get -y install php8.5-mbstring && \
-    apt-get -y install php8.5-opcache && \
     apt-get -y install php8.5-dom && \
     apt-get -y install php8.5-intl && \
     apt-get -y install php8.5-zip && \
