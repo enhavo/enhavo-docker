@@ -4,11 +4,14 @@ on:
     push:
       branches:
         - main
+    pull_request:
+      branches:
+        - main
 
 jobs:
     build:
         runs-on: ubuntu-latest
-        name: "Build All"
+        name: "Build all"
         steps:
             - name: Checkout repository
               uses: actions/checkout@v4
