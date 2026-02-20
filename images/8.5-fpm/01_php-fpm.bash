@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-service php8.3-fpm start
+service php8.5-fpm start
