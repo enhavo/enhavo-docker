@@ -1,7 +1,4 @@
 .PHONY: build-all base \
-  php74-fpm-build php74-nginx-build php74-apache-build \
-  php80-fpm-build php80-nginx-build php80-apache-build \
-  php81-fpm-build php81-nginx-build php81-apache-build \
   php82-fpm-build php82-nginx-build php82-apache-build \
   php83-fpm-build php83-nginx-build php83-apache-build \
   php84-fpm-build php84-nginx-build php84-apache-build \
@@ -12,18 +9,12 @@ PLATFORM ?= linux/amd64,linux/arm64
 VERSION ?= latest
 
 build-all: base \
-  php74-fpm-build php74-nginx-build php74-apache-build \
-  php80-fpm-build php80-nginx-build php80-apache-build \
-  php81-fpm-build php81-nginx-build php81-apache-build \
   php82-fpm-build php82-nginx-build php82-apache-build \
   php83-fpm-build php83-nginx-build php83-apache-build \
   php84-fpm-build php84-nginx-build php84-apache-build \
   php85-fpm-build php85-nginx-build php85-apache-build
 
 push-all: \
-  php74-fpm-push php74-nginx-push php74-apache-push \
-  php80-fpm-push php80-nginx-push php80-apache-push \
-  php81-fpm-push php81-nginx-push php81-apache-push \
   php82-fpm-push php82-nginx-push php82-apache-push \
   php83-fpm-push php83-nginx-push php83-apache-push \
   php84-fpm-push php84-nginx-push php84-apache-push \
