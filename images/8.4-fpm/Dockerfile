@@ -1,24 +1,27 @@
 FROM enhavo/enhavo-app:base
 CMD ["/sbin/my_init"]
 
-RUN add-apt-repository -y ppa:ondrej/php && \
-    apt-get update && \
-    apt-get -y install php8.4-fpm && \
-    apt-get -y install php8.4-apcu && \
-    apt-get -y install php8.4-mysql && \
-    apt-get -y install php8.4-gd && \
-    apt-get -y install php8.4-curl && \
-    apt-get -y install php8.4-mbstring && \
-    apt-get -y install php8.4-opcache && \
-    apt-get -y install php8.4-dom && \
-    apt-get -y install php8.4-intl && \
-    apt-get -y install php8.4-zip && \
-    update-alternatives --set php /usr/bin/php8.4 && \
-    php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && \
+RUN add-apt-repository -y ppa:ondrej/php
+
+RUN apt-get update && apt-get -y install php8.4-fpm
+RUN apt-get update && apt-get -y install php8.4-apcu
+RUN apt-get update && apt-get -y install php8.4-mysql
+RUN apt-get update && apt-get -y install php8.4-gd
+RUN apt-get update && apt-get -y install php8.4-curl
+RUN apt-get update && apt-get -y install php8.4-mbstring
+RUN apt-get update && apt-get -y install php8.4-opcache
+RUN apt-get update && apt-get -y install php8.4-dom
+RUN apt-get update && apt-get -y install php8.4-intl
+RUN apt-get update && apt-get -y install php8.4-zip
+
+RUN update-alternatives --set php /usr/bin/php8.4
+
+RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && \
     php composer-setup.php && \
     php -r "unlink('composer-setup.php');" && \
-    mv composer.phar /usr/local/bin/composer && \
-    mkdir /var/log/php8.4-fpm && \
+    mv composer.phar /usr/local/bin/composer
+
+RUN mkdir /var/log/php8.4-fpm && \
     touch /var/log/php8.4-fpm/slow.log
 
 COPY /www.conf /etc/php/8.4/fpm/pool.d/www.conf
