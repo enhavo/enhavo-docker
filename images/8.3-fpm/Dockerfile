@@ -3,16 +3,18 @@ CMD ["/sbin/my_init"]
 
 RUN add-apt-repository -y ppa:ondrej/php
 
-RUN apt-get update && apt-get -y install php8.3-fpm
-RUN apt-get update && apt-get -y install php8.3-apcu
-RUN apt-get update && apt-get -y install php8.3-mysql
-RUN apt-get update && apt-get -y install php8.3-gd
-RUN apt-get update && apt-get -y install php8.3-curl
-RUN apt-get update && apt-get -y install php8.3-mbstring
-RUN apt-get update && apt-get -y install php8.3-opcache
-RUN apt-get update && apt-get -y install php8.3-dom
-RUN apt-get update && apt-get -y install php8.3-intl
-RUN apt-get update && apt-get -y install php8.3-zip
+RUN apt-get update
+
+RUN apt-get -y install php8.3-fpm
+RUN apt-get -y install php8.3-apcu
+RUN apt-get -y install php8.3-mysql
+RUN apt-get -y install php8.3-gd
+RUN apt-get -y install php8.3-curl
+RUN apt-get -y install php8.3-mbstring
+RUN apt-get -y install php8.3-opcache
+RUN apt-get -y install php8.3-dom
+RUN apt-get -y install php8.3-intl
+RUN apt-get -y install php8.3-zip
 
 RUN update-alternatives --set php /usr/bin/php8.3
 

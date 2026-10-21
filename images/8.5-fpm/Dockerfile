@@ -3,15 +3,17 @@ CMD ["/sbin/my_init"]
 
 RUN add-apt-repository -y ppa:ondrej/php
 
-RUN apt-get update && apt-get -y install php8.5-fpm
-RUN apt-get update && apt-get -y install php8.5-apcu
-RUN apt-get update && apt-get -y install php8.5-mysql
-RUN apt-get update && apt-get -y install php8.5-gd
-RUN apt-get update && apt-get -y install php8.5-curl
-RUN apt-get update && apt-get -y install php8.5-mbstring
-RUN apt-get update && apt-get -y install php8.5-dom
-RUN apt-get update && apt-get -y install php8.5-intl
-RUN apt-get update && apt-get -y install php8.5-zip
+RUN apt-get update
+
+RUN apt-get -y install php8.5-fpm
+RUN apt-get -y install php8.5-apcu
+RUN apt-get -y install php8.5-mysql
+RUN apt-get -y install php8.5-gd
+RUN apt-get -y install php8.5-curl
+RUN apt-get -y install php8.5-mbstring
+RUN apt-get -y install php8.5-dom
+RUN apt-get -y install php8.5-intl
+RUN apt-get -y install php8.5-zip
 
 RUN update-alternatives --set php /usr/bin/php8.5
 

@@ -3,16 +3,18 @@ CMD ["/sbin/my_init"]
 
 RUN add-apt-repository -y ppa:ondrej/php
 
-RUN apt-get update && apt-get -y install php8.2-fpm
-RUN apt-get update && apt-get -y install php8.2-apcu
-RUN apt-get update && apt-get -y install php8.2-mysql
-RUN apt-get update && apt-get -y install php8.2-gd
-RUN apt-get update && apt-get -y install php8.2-curl
-RUN apt-get update && apt-get -y install php8.2-mbstring
-RUN apt-get update && apt-get -y install php8.2-opcache
-RUN apt-get update && apt-get -y install php8.2-dom
-RUN apt-get update && apt-get -y install php8.2-intl
-RUN apt-get update && apt-get -y install php8.2-zip
+RUN apt-get update
+
+RUN apt-get -y install php8.2-fpm
+RUN apt-get -y install php8.2-apcu
+RUN apt-get -y install php8.2-mysql
+RUN apt-get -y install php8.2-gd
+RUN apt-get -y install php8.2-curl
+RUN apt-get -y install php8.2-mbstring
+RUN apt-get -y install php8.2-opcache
+RUN apt-get -y install php8.2-dom
+RUN apt-get -y install php8.2-intl
+RUN apt-get -y install php8.2-zip
 
 RUN update-alternatives --set php /usr/bin/php8.2
 
