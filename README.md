@@ -37,6 +37,9 @@ Available versions:
 - `8.5-fpm-latest` `8.5-fpm-0.8`
 - `8.5-apache-latest` `8.5-apache-0.8`
 - `8.5-nginx-latest` `8.5-nginx-0.8`
+- `8.6-fpm-latest` `8.6-fpm-0.8`
+- `8.6-apache-latest` `8.6-apache-0.8`
+- `8.6-nginx-latest` `8.6-nginx-0.8`
 
 Usage
 -----
