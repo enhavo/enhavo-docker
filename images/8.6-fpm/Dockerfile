@@ -1,27 +1,15 @@
 FROM enhavo/enhavo-app:base
 CMD ["/sbin/my_init"]
 
-RUN add-apt-repository -y ppa:ondrej/php
+RUN curl -sSLo /tmp/debsuryorg-archive-keyring.deb https://packages.sury.org/debsuryorg-archive-keyring.deb && \
+    dpkg -i /tmp/debsuryorg-archive-keyring.deb && \
+    rm /tmp/debsuryorg-archive-keyring.deb && \
+    echo "deb [signed-by=/usr/share/keyrings/debsuryorg-archive-keyring.gpg] https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list
 
 RUN apt-get update
 
 RUN apt-get -y install php8.6-fpm
-# php8.6-apcu is not yet packaged in ppa:ondrej/php and the latest APCu release
-# (5.1.28) does not compile against PHP 8.6, so build it from an upstream commit
-# that contains the PHP 8.6 fixes. Switch to the php8.6-apcu package once available.
-ARG APCU_VERSION=fb2c942552a3f5dab7f4dea4afb5cf0831222c57
-RUN apt-get -y install php8.6-dev && \
-    curl -fsSL https://github.com/krakjoe/apcu/archive/${APCU_VERSION}.tar.gz | tar -xz -C /tmp && \
-    cd /tmp/apcu-${APCU_VERSION} && \
-    phpize8.6 && \
-    ./configure --with-php-config=/usr/bin/php-config8.6 && \
-    make -j"$(nproc)" && \
-    make install && \
-    cd / && rm -rf /tmp/apcu-${APCU_VERSION} && \
-    echo "extension=apcu.so" > /etc/php/8.6/mods-available/apcu.ini && \
-    phpenmod -v 8.6 apcu && \
-    apt-get -y purge php8.6-dev && \
-    apt-get -y autoremove
+RUN apt-get -y install php8.6-apcu
 RUN apt-get -y install php8.6-mysql
 RUN apt-get -y install php8.6-gd
 RUN apt-get -y install php8.6-curl
